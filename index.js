@@ -15,6 +15,7 @@ let sec = parseFloat(userSec)
 
 let counter = min*60 + sec;
 let step = 100/counter;
+let start_count = counter
 loader.style.width = "100%";
 
 
@@ -27,8 +28,7 @@ const timer = setInterval(() => {
   secOfTimer.textContent=sec 
   minOfTimer.textContent=min 
 
-  
-
+ 
   if (sec === 0){
     min--;
     sec += 59;
@@ -57,5 +57,11 @@ const timer = setInterval(() => {
     selector.textContent= " "
     clearInterval(timer);
   }
+
+   if (start_count - counter === 5){
+    alert("Стало на 1 минуту меньше")
+    start_count -= 5
+  }
+
 }, 1000);
 
