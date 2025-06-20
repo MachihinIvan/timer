@@ -58,10 +58,7 @@ const timer = setInterval(() => {
     clearInterval(timer);
   }
 
-   if (start_count - counter === 5){
-    alert("Стало на 1 минуту меньше")
-    start_count -= 5
-  }
+   
 
 }, 1000);
 
